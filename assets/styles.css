@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image:  linear-gradient(#D7F1EE,#ECFFF9);
+    height: 100vh;
+    line-height: 1.6;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+#main-nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+#main-nav ul{
+    display: flex;
+}
+
+#main-nav li{
+    padding: 1rem 1.5rem;
+}
+
+#main-nav a{
+    color: #000000;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-bottom: 4px solid transparent;
+    padding-bottom: 5px;
+}
+
+#main-nav a:hover{
+    border-color: #BDBDBD ;
+}
+
+#logo {
+    font-size: 40px;
+    padding-left: 90px;
+    color: #333;
+    text-transform: uppercase; 
+}
+
+#header-home {
+    background: url("../img/showcase.jpg") no-repeat center right/cover;
+    height: 100vh;
+
+}
+#header-home .header-content {
+text-align: center;
+padding-top: 15%; 
+}
+
+#header-home .header-content h1 {
+font-size: 4rem;
+line-height: 1.2; 
+color: #64B4A3
+}
+
+.lead{
+    font-size: 20px;
+    padding: 20px 0 40px  0;
+    color: #333;
+}
+
+.btn{
+    color: #64B4A3;
+    font-size: 20px;
+
+}
+
+.header-content a{
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: #64B4A3;
+    text-transform: uppercase;
+    position: relative;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+
+.header-content a:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-top: 1px white solid;
+    border-left: 1px white solid;
+    border-bottom: 6px black solid;
+    opacity: 1;
+    transition: all 0.6s 0.3s;
+}
+
+.header-content a:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    border-top: 1px white solid;
+    border-right: 1px white solid;
+    border-bottom: 6px black solid;
+    opacity: 1;
+    transition: all 0.6s 0.3s;
+}
+
+.header-content a:hover:before{
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.header-content a:hover:after{
+    transform: translateX(50%);
+    opacity: 0;
+}
+
+#main-nav a.current {
+    border-color: #64B4A3; 
+}
+
+span{
+    position: absolute;
+    top:0;
+    left: 50%;
+    background: white;
+    width: 1px;
+    height: 100px;
+    transform-origin: center;
+    transform: TranslateY(-120px);
+    z-index: 1;
+    transition: all 0.8s;
+    opacity: 0;
+}
+
+.header-content a:hover span{
+    opacity: 1;
+    transform: translateY(150px);
+    animation: hide 0.7s linear forwards;
+}
+
+
+@keyframes hide {
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+
+

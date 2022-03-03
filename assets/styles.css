@@ -4,10 +4,12 @@
     padding: 0;
 }
 
+/*General styles*/
+
 body{
     background-image:  linear-gradient(#D7F1EE,#ECFFF9);
-    height: 100vh;
     line-height: 1.6;
+    font-family: 'Cinzel', serif;
 }
 
 ul{
@@ -18,6 +20,7 @@ a{
     text-decoration: none;
 }
 
+/*Header and Navbar*/
 #main-nav{
     display: flex;
     justify-content: space-between;
@@ -42,6 +45,10 @@ a{
 
 #main-nav a:hover{
     border-color: #BDBDBD ;
+}
+
+#main-nav a.current {
+    border-color: #64B4A3; 
 }
 
 #logo {
@@ -73,13 +80,9 @@ color: #64B4A3
     color: #333;
 }
 
-.btn{
-    color: #64B4A3;
-    font-size: 20px;
 
-}
-
-.header-content a{
+/*main button styles*/
+.main-btn{
     font-size: 20px;
     font-weight: bolder;
     letter-spacing: 3px;
@@ -90,7 +93,7 @@ color: #64B4A3
     text-decoration: none;
 }
 
-.header-content a:before{
+.main-btn:before{
     content: "";
     position: absolute;
     top: 0;
@@ -104,7 +107,7 @@ color: #64B4A3
     transition: all 0.6s 0.3s;
 }
 
-.header-content a:after{
+.main-btn:after{
     content: "";
     position: absolute;
     top: 0;
@@ -118,19 +121,16 @@ color: #64B4A3
     transition: all 0.6s 0.3s;
 }
 
-.header-content a:hover:before{
+.main-btn:hover:before{
     transform: translateX(-50%);
     opacity: 0;
 }
 
-.header-content a:hover:after{
+.main-btn:hover:after{
     transform: translateX(50%);
     opacity: 0;
 }
 
-#main-nav a.current {
-    border-color: #64B4A3; 
-}
 
 span{
     position: absolute;
@@ -158,6 +158,117 @@ span{
         opacity: 0;
     }
 }
+
+/*main button styles ends here*/
+
+
+/*Contact page starts here*/
+
+#contact-a .text-fields {
+    display: grid;
+    grid-template-areas: 'name email' 'subject phone' 'message message';
+    grid-gap: 1.2rem;
+    margin-bottom: 1.2rem; }
+    #contact-a .text-fields .name-input {
+      grid-area: name; }
+    #contact-a .text-fields .subject-input {
+      grid-area: subject; }
+    #contact-a .text-fields .email-input {
+      grid-area: email; }
+    #contact-a .text-fields .phone-input {
+      grid-area: phone; }
+    #contact-a .text-fields .message-input {
+      grid-area: message;
+      height: 100px; }
+    #contact-a .text-fields .text-input {
+      padding: 0.5rem 1rem; }
+  
+  #contact-a button[type='submit'] {
+    width: 50%; }
+
+    #contact-b{
+        background-color: #87E5D1;
+    }
+  
+  #contact-b .contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center; }
+  
+  #contact-c h1 {
+    text-align: center;
+    font-size: 4rem; }
+
+    .py-3 {
+        padding: 3rem 0; }
+      
+.container {
+ max-width: 1280px;
+padding: 0 1.5rem;
+margin: auto;
+overflow: hidden; 
+}
+
+.section-title {
+    font-size: 2rem;
+    display: block;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 100;
+    text-transform: uppercase; 
+}
+
+.btn-2 {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    transition: all 0.5s;
+    border: none;
+    cursor: pointer;
+   ;
+ }
+  
+.btn-2 {
+    color: #333;
+    background-color: #64B4A3; 
+}
+
+.btn-2:hover{
+    background-color: #87E5D1;
+    color: #fff;
+}
+
+.text-center {
+    text-align: center;
+ }
+
+ .contact-b i{
+    font-size: 40px;
+ }
+
+ #main-footer {
+    background: #333;
+    color: #fff;
+    height: 5rem; }
+    #main-footer .footer-content {
+      display: flex;
+      justify-content: space-between;
+      height: 5rem;
+      align-items: center; }
+      #main-footer .footer-content .social .fab {
+        margin-right: 1rem;
+        border: 2px #fff solid;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        line-height: 20px;
+        text-align: center;
+        padding: 0.5rem; }
+        #main-footer .footer-content .social .fab:hover {
+         background-color: #87E5D1;
+         cursor: pointer;
+}
+  
+  
 
 
 
